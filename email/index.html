@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<title>Форма обратной связи</title>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Форма обратной связи</h1>
+		<div id="result"></div>
+		<form method="POST" id="mailForm" name="mailForm" action="javascript:void(null);" onsubmit="sendForm();">
+		  <div class="row">
+		  	<div class="col-md-4">
+		  		<div class="form-group">
+				    <label for="surname">Фамилия</label>
+				    <input type="text" class="form-control" name="surname" id="surname" placeholder="Иванов" required>
+				</div>
+		  	</div>
+		  	<div class="col-md-4">
+		  		<div class="form-group">
+				    <label for="name">Имя</label>
+				    <input type="text" class="form-control" name="name" id="name" placeholder="Иван" required>
+				</div>
+		  	</div>
+	  		<div class="col-md-4">
+	  			<div class="form-group">
+			    	<label for="patronymic">Отчество</label>
+			    	<input type="text" class="form-control" name="patronymic" id="patronymic" placeholder="Иванович">
+				</div>
+		  	</div>
+		  </div>
+		  <div class="row">
+		  	<div class="col-md-6">
+		  		<div class="form-group">
+			    	<label for="phone">Контактный телефон</label>
+			    	<input type="text" class="form-control" name="phone" id="phone" placeholder="+7 777 777777" required>
+				</div>
+		  	</div>
+		  	<div class="col-md-6">
+		  		<div class="form-group">
+			    	<label for="email">Электронный адрес</label>
+			    	<input type="email" class="form-control" name="email" id="email" placeholder="ivan@youdomain.ru" required>
+				</div>
+
+		  	</div>
+		  </div>
+		   <div class="row">
+		   <div class="col-md-6">
+		  		<div class="form-group">
+			    	<label for="mailAddress">Почтовый адрес</label>
+			    	<input type="text" class="form-control" name="mailAddress" id="mailAddress" placeholder="354000, г. Сочи, ул. Конституции, 2" required>
+				</div>
+		  	</div>
+		  	<div class="col-md-6">
+		  		<div class="form-group">
+			    	<label for="resAddress">Адрес проживания</label>
+			    	<input type="text" class="form-control" name="resAddress" id="resAddress" placeholder="354000, г. Сочи, ул. Роз, 22" required>
+				</div>
+
+		  	</div>
+		  </div>
+
+		  <div class="form-group">
+		   <span id="addFiles"></span> <label for="loadFile">Загрузить файл</label>
+		    <div class="filesList"><input type="file" name="loadFile[]" class="loadFile"></div>		    
+		    <p class="help-block">Загрузите дополнительную информацию.</p>
+		  </div>		 		  
+		  
+		  <!-- <input type="submit" name="submit" class="btn btn-default" value="Отправить" />-->
+		  <button id="sendFormBtn" type="submit" class="btn btn-default">Отправить</button>
+		  <button type="reset" class="btn btn-default">Очистить</button>
+		</form>		
+	</div>
+<!-- jQuery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<!-- User JavaScript -->
+<script type="text/javascript" src="js/sendForm.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
